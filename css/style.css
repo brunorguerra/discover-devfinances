@@ -1,0 +1,221 @@
+/* Header */
+header {
+    width: 100%;
+    background: var(--purple-dark);
+    
+    text-align: center;
+    padding: 3rem 3rem 18rem 3rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header h1 {
+    display: flex;
+    align-items: center;
+    color: #f1f2f2;
+
+    font-size: 2.6rem;
+    font-weight: bold;
+}
+header .purple {
+    color: var(--purple);
+}
+
+
+
+
+/* titles */
+h2 {
+    margin-top: 1rem;
+    margin-bottom: 0.8rem;
+
+    color: var(--title);
+
+    font-size: 2.2rem;
+    font-weight: 400;
+}
+
+
+
+
+/* main balance */
+main #balance {
+    width: 100%;
+    
+    display: grid;
+    grid-template-areas: 
+    "title title title"
+    "input output total";
+    grid-column-gap: 3.2rem;
+
+    margin-top: -8rem;
+} 
+main #balance h2 {
+    color: var(--white)
+} 
+
+/* balance cards */
+.title-card {
+    grid-area: title;
+}
+.input {
+    grid-area: input;
+}
+.output {
+    grid-area: output;
+}
+.total {
+    grid-area: total;
+}
+
+main #balance .card-balance {
+    background: var(--white);
+
+    border-radius: .5rem;
+    padding: 2rem 2rem 3.2rem 2rem;
+
+}
+main #balance .card-balance p {
+    font-size: 3.2rem;
+    font-weight: bold;
+
+    color: var(--title);
+}
+main #balance .card-balance.total {
+    background: var(--purple);
+}
+main #balance .card-balance.total p, 
+main #balance .card-balance.total h3 {
+    color: var(--white) !important;
+} 
+
+/* title cards */
+main #balance .card-balance .title-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 1.4rem;
+}
+main #balance .card-balance .title-card h3 {
+    font-size: 1.6rem;
+    font-weight: 400;
+
+    color: var(--title);
+}
+main #balance .card-balance .title-card img {
+    width: 4rem;
+    height: 4rem;
+}
+
+
+
+
+main #transaction {
+    width: 100%;
+
+    margin-top: 6.4rem;
+    margin-bottom: 7rem;
+}
+main #transaction #data-table {
+    width: 100%;
+    text-align: left;
+
+    border-spacing: 0 .8rem;
+
+}
+main table td, main table th{
+    background: var(--white);
+
+    padding: 2rem 3.2rem;
+
+    font-size: 1.6rem;
+
+    border-radius: .5rem;
+}
+main table th {
+    background: transparent;
+
+    color: var(--text);
+    font-weight: normal;
+}
+
+main table tbody tr {
+    opacity: .75;
+    transition: opacity .15s ease;
+}
+main table tbody tr:hover {
+    opacity: 1;
+}
+
+
+main table .description {
+    color: var(--title)
+}
+main table .income {
+    color: var(--green)
+}
+main table .expense {
+    color: var(--red)
+}
+main table .date {
+    color: var(--text)
+}
+
+
+main #balance h2, main #transaction h2 {
+    display: none;
+}
+
+
+
+
+
+/* footer */
+footer {
+    width: 100%;
+    text-align: center;
+
+    padding: 1rem;
+}
+footer p {
+    margin: 2rem 0;
+    font-size: 1.8rem;
+
+    color: var(--title);
+}
+footer p a{
+    display: inline-block;
+    color: var(--purple);
+    text-decoration: underline;
+
+    transition: all .3s ease;
+}
+footer p a:hover {
+    transform: scale(1.04);
+}
+footer .green {
+    color: #227EF0;
+}
+
+/* MediasQueries */
+@media (max-width: 940px) {
+    main #balance h2, main #transaction h2 {
+        display: block;
+    }
+
+    main #balance {
+        grid-template-areas: 
+        "title"
+        "input"
+        "output"
+        "total";
+        grid-row-gap: 3.2rem;
+        grid-column: 0;
+
+        margin-top: -16rem;
+    }
+
+   
+}

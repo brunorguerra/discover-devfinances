@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DevFinances</title>
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="/assets/favicon.svg" type="image/x-icon">
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/global.css" />
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+  <body>
+    <header>
+      <h1 id="logo">dev<span class="purple">.</span>finance<img src="assets/$.svg" /></h1>
+    </header>
+
+
+    <main class="content">
+      <section id="balance">
+
+        <h2>Balanço</h2>
+
+
+        <div class="card-balance input">
+            <div class="title-card">
+                <h3>Entradas</h3>
+                <img src="/assets/arrow-entrada.svg" alt="">
+            </div>
+            <p>R$ 17.400,00</p>
+        </div><!--entradas-->
+        
+        <div class="card-balance output">
+            <div class="title-card">
+                <h3>Saídas</h3>
+                <img src="/assets/arrow-saida.svg" alt="">
+            </div>
+            <p>R$ 1.259,00</p>
+        </div><!--saidas-->
+        
+        <div class="card-balance total">
+            <div class="title-card">
+                <h3>Total</h3>
+                <img src="/assets/total.svg" alt="">
+            </div>
+            <p>R$ 16.141,00</p>
+        </div><!--total-->
+      </section><!--balanço-->
+
+
+      <section id="transaction">
+        <h2>Transações</h2>
+
+        <table id="data-table">
+          <thead>
+            <tr>
+              <th>Descrição</th>
+              <th>Valor</th>
+              <th>Data</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td class="description">Criação de Website</td>
+              <td class="income">R$ 4.000,00</td>
+              <td class="date">03/10/2021</td>
+            </tr>
+            <tr>
+              <td class="description">Luz</td>
+              <td class="expense">- R$ 400,00</td>
+              <td class="date">03/10/2021</td>
+            </tr>
+            <tr>
+              <td class="description">Alguel</td>
+              <td class="expense">- R$ 1.000,00</td>
+              <td class="date">03/10/2021</td>
+            </tr>
+          </tbody>
+        </table>
+      </section><!--transações-->
+    </main>
+
+    <footer class="content">
+        <p>
+          Projeto para 
+          <span class="green">aprendizado</span>, Criado por 
+          <a href="https://brunoguerra.netlify.app/">Bruno Guerra</a>.
+        </p>
+        <p>dev.finance$</p>
+    </footer>
+  </body>
+</html>
