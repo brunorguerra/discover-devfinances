@@ -68,7 +68,6 @@ main #balance h2 {
 .total {
     grid-area: total;
 }
-
 main #balance .card-balance {
     background: var(--white);
 
@@ -112,12 +111,31 @@ main #balance .card-balance .title-card img {
 
 
 
+/* Main Transaction */
 main #transaction {
     width: 100%;
+
+    display: block;
+    overflow: auto;
 
     margin-top: 6.4rem;
     margin-bottom: 7rem;
 }
+main #transaction .button {
+    color: var(--green);
+
+    display: inline-block;
+    margin-bottom: 1rem;
+
+    font-size: 1.6rem;
+
+    transition: color .15s ease;
+}
+main #transaction .button.new:hover {
+    color: #3DD705;
+}
+
+/* Transaction table */
 main #transaction #data-table {
     width: 100%;
     text-align: left;
@@ -131,16 +149,21 @@ main table td, main table th{
     padding: 2rem 3.2rem;
 
     font-size: 1.6rem;
-
-    border-radius: .5rem;
 }
 main table th {
-    background: transparent;
+    background: rgba(134, 0, 207, .9) !important;
 
-    color: var(--text);
+    color: var(--white);
     font-weight: normal;
 }
-
+main table td:first-child,
+main table th:first-child{
+    border-radius: .5rem 0 0 .5rem;
+}
+main table td:last-child,
+main table th:last-child {
+    border-radius: 0 .5rem .5rem 0;
+}
 main table tbody tr {
     opacity: .75;
     transition: opacity .15s ease;
@@ -148,8 +171,6 @@ main table tbody tr {
 main table tbody tr:hover {
     opacity: 1;
 }
-
-
 main table .description {
     color: var(--title)
 }
@@ -162,12 +183,6 @@ main table .expense {
 main table .date {
     color: var(--text)
 }
-
-
-main #balance h2, main #transaction h2 {
-    display: none;
-}
-
 
 
 
@@ -185,6 +200,9 @@ footer p {
 
     color: var(--title);
 }
+footer p:nth-child(1) {
+    font-weight: bold;
+}
 footer p a{
     display: inline-block;
     color: var(--purple);
@@ -199,12 +217,10 @@ footer .green {
     color: #227EF0;
 }
 
-/* MediasQueries */
-@media (max-width: 940px) {
-    main #balance h2, main #transaction h2 {
-        display: block;
-    }
 
+
+/* MediasQueries - Responsive */
+@media (max-width: 940px) {
     main #balance {
         grid-template-areas: 
         "title"
