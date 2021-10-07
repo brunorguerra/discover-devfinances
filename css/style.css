@@ -80,6 +80,8 @@ main #balance .card-balance p {
     font-weight: bold;
 
     color: var(--title);
+
+    /* filter: blur(.6rem); */
 }
 main #balance .card-balance.total {
     background: var(--purple);
@@ -185,6 +187,94 @@ main table .date {
 }
 
 
+
+/* Modal */
+#modal-overlay {
+    width: 100%;
+    height: 100%;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    background: rgba(0, 0, 0, .7);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    visibility: hidden;
+}
+#modal-overlay.active-modal {
+    opacity: 1;
+    visibility: visible;
+}
+#modal-overlay .modal {
+    padding: 2.8rem;
+    background: var(--background);
+}
+.modal-form {
+    max-width: 50rem;
+}
+.modal-form h2 {
+    margin-top: 0;
+}
+.modal-form form input {
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+
+    background: var(--white);
+    width: 100%;
+
+    border: 0;
+    border-radius: .3rem;
+
+    outline: none;
+}
+.modal-form form .message-help {
+    display: inline-block;
+    color: var(--text);
+
+    font-size: 1.2rem;
+
+    margin-bottom: 2rem;
+}
+.modal form .actions {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 1rem;
+}
+.modal form .actions .button,
+.modal form .actions button {
+    padding: 1.6rem 0;
+    border-radius: .3rem;
+
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 500;
+
+    cursor: pointer;
+    opacity: .75;
+
+    transition: opacity .15s ease;
+}
+.modal form .actions .button:hover,
+.modal form .actions button:hover {
+    opacity: 1;
+}
+.modal form .actions .cancel {
+    border: 3px solid var(--red);
+    color: var(--red);
+}
+.modal form .actions button {
+    background: var(--green);
+    color: var(--white);
+    border: 0;
+}
 
 
 /* footer */
