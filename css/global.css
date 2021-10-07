@@ -9,6 +9,10 @@
     --purple-dark: #4e0664;
     --purple: #8600cf;
 }
+*::selection {
+    background: var(--purple);
+    color: var(--white)
+}
 html {
     font-size: 62.5%;
 }

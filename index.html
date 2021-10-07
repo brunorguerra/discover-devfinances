@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="./css/global.css" />
     <link rel="stylesheet" href="./css/style.css">
   </head>
-  <body>
+  <body ondragstart="return false">
     <header>
       <h1 id="logo">dev<span class="purple">.</span>finance<img src="assets/$.svg" /></h1>
     </header>
@@ -95,7 +95,7 @@
       </section><!--transações-->
     </main>
 
-    <section id="modal-overlay" class="active-modal">
+    <section id="modal-overlay" class="">
         <div class="modal">
           <div class="modal-form">
             <h2>Nova Transação</h2>
@@ -134,5 +134,7 @@
         </p>
         <p>2021 - dev.finance$</p>
     </footer>
+
+    <script src="/js/scripts.js"></script>
   </body>
 </html>
