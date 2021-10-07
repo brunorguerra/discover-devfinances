@@ -205,6 +205,8 @@ main table .date {
 
     opacity: 0;
     visibility: hidden;
+
+    z-index: 5;
 }
 #modal-overlay.active-modal {
     opacity: 1;
