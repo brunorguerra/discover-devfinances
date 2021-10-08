@@ -221,6 +221,7 @@ main table .date {
 }
 .modal-form .title-modal {
     display: flex;
+    flex-flow: row wrap;
     align-items: center;
     justify-content: space-between;
 }
