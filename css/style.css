@@ -219,6 +219,30 @@ main table .date {
 .modal-form {
     max-width: 50rem;
 }
+.modal-form .title-modal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.modal-form .title-modal #error {
+    font-size: 1.2rem;
+    font-weight: bold;
+
+    color: var(--red);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateX(50%);
+
+    transition: all .2s linear;
+}
+.modal-form .title-modal #error.active-error {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0%);
+
+}
 .modal-form h2 {
     margin-top: 0;
 }

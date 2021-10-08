@@ -80,8 +80,12 @@
     <section id="modal-overlay" class="">
         <div class="modal">
           <div class="modal-form">
-            <h2>Nova Transação</h2>
-            <form action="">
+            <div class="title-modal">
+              <h2>Nova Transação</h2>
+              <p id="error">Por favor, preencha todos os campos</p>
+            </div>
+
+            <form action="" onsubmit="Form.submit(event)">
               <div class="input-group">
                 <label class="sr-only" for="description">Descrição</label>
                 <input type="text" id="description" name="description" placeholder="Descrição">
